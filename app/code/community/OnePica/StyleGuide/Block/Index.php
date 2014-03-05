@@ -3,7 +3,7 @@
 class OnePica_StyleGuide_Block_Index extends Mage_Core_Block_Template 
 {
 	
-	private $files = array(
+	public $files = array(
         "Messages" => "messages.phtml",
         "Colors"   => "colors.phtml",
         "Buttons" => array(
