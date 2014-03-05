@@ -1,0 +1,190 @@
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<style>
+    /* GitHub Theme http://jmblog.github.io/color-themes-for-google-code-prettify/github/ */
+    .prettyprint {
+      background: white !important;
+      font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace !important;
+      font-size: 12px !important;
+      line-height: 1.5 !important;
+      border: 1px solid #ccc !important;
+      padding: 10px !important;
+    }
+
+    .pln {
+      color: #333333 !important;
+    }
+
+    @media screen {
+     .str { color: #dd1144 !important;  }
+     .kwd { color: #333333 !important;  }
+     .com { color: #999988 !important;  }
+     .typ { color: #445588 !important;  }
+     .lit { color: #445588 !important;  }
+     .pun { color: #333333 !important;  }
+     .opn { color: #333333 !important;  }
+     .clo { color: #333333 !important;  }
+     .tag { color: #0000cc !important;  }
+     .atn { color: teal    !important;  }
+     .atv { color: #dd1144 !important;  }
+     .dec { color: #333333 !important;  }
+     .var { color: teal    !important;  }
+     .fun { color: #990000 !important;  }
+    }
+
+    /* Specify class=linenums on a pre to get line numbering */
+    ol.linenums {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* IE indents via margin-left */
+    li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 { /* */ }
+
+    /* Alternate shading for lines */
+    li.L1, li.L3, li.L5, li.L7, li.L9 { /* */ }
+</style>
+
+<style>
+    .pattern {
+        clear: both;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .pattern-1 {
+        margin-bottom: 40px;
+    }
+    .pattern-2 {
+        margin-bottom: 20px;
+    }
+    .pattern .title {
+        margin-bottom: 5px;
+        /*border-top: 1px solid #aaa;*/
+        padding: 5px;
+    }
+    .pattern .title * {
+        display: inline-block;
+    }
+    .pattern-1 > .title {
+        border-top: 1px solid #ccc;
+    }
+
+    .pattern.sub {
+        margin-left: 10px;
+    }
+
+    .pattern .source {
+        height: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    .pattern .source code {
+        margin: 0 0 10px 0;
+        /*background: #333;*/
+        /*color: white;*/
+        border: 1px solid #333;
+        white-space: pre-wrap;
+        display: block;
+        padding: 10px;
+        border-radius: 6px;
+    }
+    .pattern .display {
+        border-color: rgba(128, 128, 128, .5);
+        border-width: 1px;
+        border-style: solid;
+        padding: 10px;
+        border-radius: 6px;
+    }
+    .pattern .swatch {
+        display: inline-block;
+        border: 1px solid #ccc;
+        min-width: 40px;
+        vertical-align: middle;
+        padding: 40px 50px;
+        margin: 0 20px 20px 0;
+    }
+    .pattern .swatch span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .col-main {
+        max-width: 926px;
+        margin: auto;
+    }
+    .indent {
+        padding-left: 20px;
+    }
+
+</style>
+
+
+<?php 
+    echo $this->getHtml();
+?>
+
+<script type='text/javascript'>
+
+// Conditionally Load jQuery
+// Source: https://gist.github.com/gists/902090/
+var init, maybeLoadJq;
+ 
+init = function() {
+
+    jQuery.noConflict();
+
+    jQuery(document).ready(function() {
+
+        /* action for view source links */
+        jQuery('.pattern .title a').each(function(i, el){
+
+            jQuery(el).click(function(e){
+
+                var parent = jQuery(jQuery(this).parents('.pattern')[0]);
+                var source = parent.find('.source');
+                var sourceClone = source.clone().css({
+                    "height": "auto",
+                    "display": "none"            
+                }).insertAfter(source);
+                height = sourceClone.css("height");
+                sourceClone.remove();
+
+                e.preventDefault();
+
+                if (parseInt(source.css('height')) > 0) {
+                    source.animate({"height": 0}, 250);
+                    jQuery(this).text('view source');
+                } else {
+                    // source.animateHeightAuto(250);
+                    source.animate({"height": height}, 250);
+                    jQuery(this).text('hide source');
+                }
+            });
+            
+        });
+    });
+    
+};
+ 
+maybeLoadJq = function() {
+    var jQ;
+    if (!(typeof jQuery !== "undefined" && jQuery !== null)) {
+        jQ = document.createElement('script');
+        jQ.type = 'text/javascript';
+        jQ.onload = jQ.onreadystatechange = init;
+        jQ.src = '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
+        return document.body.appendChild(jQ);
+    } else {
+        return init();
+    }
+};
+ 
+if (window.addEventListener) {
+    window.addEventListener('load', maybeLoadJq, false);
+} else if (window.attachEvent) {    
+    window.attachEvent('onload', maybeLoadJq);
+}
+
+
+</script>
+

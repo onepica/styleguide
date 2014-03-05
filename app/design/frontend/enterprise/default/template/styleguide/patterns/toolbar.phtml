@@ -1,0 +1,12 @@
+<?php
+    /**
+     * Product list toolbar
+     * @see Mage_Catalog_Block_Product_List_Toolbar
+     * @see app/design/frontend/enterprise/template/catalog/product/list/toolbar.phtml
+     */
+    $rootCategoryId = Mage::app()->getStore(0)->getRootCategoryId();
+    $collection = Mage::getModel('catalog/category')->load($rootCategoryId)->getProductCollection();
+    echo Mage::app()->getLayout()->createBlock('catalog/product_list_toolbar')
+        ->setCollection($collection)
+        ->toHtml(); 
+?>

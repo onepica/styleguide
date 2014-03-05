@@ -1,0 +1,8 @@
+(won't show on first load of this page.  displayed as it would on the page)
+<?php 
+    Mage::getSingleton('core/session')->addError("This is an Error message");
+    Mage::getSingleton('core/session')->addWarning("This is a Warning message");
+    Mage::getSingleton('core/session')->addNotice("This is a Notice message");
+    Mage::getSingleton('core/session')->addSuccess("This is a Success message");
+    Mage::getSingleton('core/session')->addSuccess("This is a 2nd Success message");
+?>

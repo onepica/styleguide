@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <OnePica_StyleGuide>
+            <active>true</active>
+            <codePool>community</codePool>
+        </OnePica_StyleGuide>
+    </modules>
+</config>

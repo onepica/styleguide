@@ -1,0 +1,38 @@
+<?php 
+    $level = $this->getLevel();
+    $title = $this->getTitle();
+?>
+
+<div class="pattern pattern-<?php echo $level ?>">
+
+    <div class="title">
+        <?php echo "<h${level}>${title}</h${level}>"?>
+        <?php if ($this->getSectionContent() == false): ?>
+            <a class="sub" href="#">view source</a> 
+        <?php endif; ?>
+    </div>
+    
+    <div class="indent">
+        
+        <?php if ($this->getSectionContent() != false): ?>
+            
+            <?php echo $this->getSectionContent(); ?>
+
+        <?php else: ?>
+
+            <div class="source">
+                <code class="prettyprint lang-html"><?php 
+                        $patternsDir = dirname(__FILE__) . DS . 'patterns';
+                        if (file_exists($patternsDir . DS .$this->file)){
+                            echo htmlspecialchars(file_get_contents($patternsDir . DS .$this->file));
+                        }
+                ?></code>
+            </div>
+            <div class="display">
+                <?php echo $this->getDisplay(); ?>
+            </div>
+
+        <?php endif; ?>
+
+    </div>
+</div>
