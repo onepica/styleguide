@@ -1,0 +1,40 @@
+{
+    "Messages" : "messages.phtml",
+    "Colors"   : "colors.phtml",
+    "Buttons" : {
+        "Plain Button (class='button')"            : "buttons/button.phtml",
+        "Primary Button (class='btn-primary')"     : "buttons/btn-primary.phtml",
+        "Secondary Button (class='btn-secondary')" : "buttons/btn-secondary.phtml",
+        "Small Button (class='btn-small')"         : "buttons/btn-small.phtml",
+        "Large Button (class='btn-large')"         : "buttons/btn-large.phtml",
+        "Disabled Button (class='btn-disabled')"   : "buttons/btn-disabled.phtml"
+    },
+    "Text": {
+        "Headers" : {
+            "&lt;h&gt; tags"  : "headers/h.phtml",
+            "Category Titles" : "headers/category-title.phtml"
+        },
+        "Paragraphs &lt;p&gt;"       : "text/p.phtml",
+        "Unordered Lists &lt;ul&gt;" : "text/ul.phtml",
+        "Ordered Lists &lt;ol&gt;"   : "text/ol.phtml",
+        "Strong text &lt;strong&gt;" : "text/strong.phtml",
+        "&lt;blockquote&gt;"         : "text/blockquote.phtml",
+        "&lt;em&gt;"                 : "text/em.phtml",
+        "Links"                      : "text/a.phtml"
+    },
+    "Forms":{
+        "Text input" : {
+            "Not Required"      : "forms/input-text.phtml",
+            "Required"          : "forms/input-text-required.phtml",
+            "Validation Failed" : "forms/input-text-validation-error.phtml"
+        },
+        "Dropdowns" : {
+            "Normal"            : "forms/dropdown.phtml",
+            "Validation Failed" : "forms/dropdown-validation-failed.phtml"
+        },
+        "Radio buttons" : "forms/radio.phtml",
+        "Checkboxes"    : "forms/checkboxes.phtml",
+        "Text area"     : "forms/textarea.phtml"
+    },
+    "Pagination toolbar" : "toolbar.phtml"
+}

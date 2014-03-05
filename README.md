@@ -14,5 +14,5 @@ For example, edit `template/styleguide/patterns/colors.phtml` to customize the c
 
 Extending 
 --- 
-To add another pattern that will be displayed on the /style-guide page, first create a .phtml file somewhere in the `template/styleguide/patterns/` directory.  The pattern then needs to be added to the `$files` array in `OnePica_StyleGuide_Block_Index`.  A pattern consists of a key will be displayed as the pattern title and a value that is a path to a .phtml file or an array of patterns.
+To add another pattern that will be displayed on the /style-guide page, first create a .phtml file somewhere in the `template/styleguide/patterns/` directory.  The pattern then needs to be added to `template/styleguide/styleguide.json`.  A pattern consists of a key that will be displayed as the pattern's title and a value that is a path to a .phtml file (relative to `template/styleguide/patterns/`) or an array of patterns. 
 
