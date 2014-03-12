@@ -22,6 +22,10 @@
         "&lt;em&gt;"                 : "text/em.phtml",
         "Links"                      : "text/a.phtml"
     },
+    "Price display" : {
+        "Regular Price" : "prices/regular.phtml",
+        "Special Price" : "prices/special.phtml"
+    },
     "Forms":{
         "Text input" : {
             "Not Required"      : "forms/input-text.phtml",
