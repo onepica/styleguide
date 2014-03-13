@@ -8,7 +8,7 @@ After installing, this page can be accessed by going to `http://example.com/styl
 
 Customizing
 ---
-Each pattern on the style-guide page has a corresponding .phtml file in the template directory under `template/styleguide/patterns/`.  This directory should be copied into the site's design packages and edits can be made in there.  
+Each pattern on the style-guide page has a corresponding .phtml file in the template directory under `template/styleguide/patterns/`.  The `template/styleguide/` directory should be copied into the site's design packages and edits can be made in there.  
 
 For example, edit `template/styleguide/patterns/colors.phtml` to customize the color swatches for the site's design.
 
