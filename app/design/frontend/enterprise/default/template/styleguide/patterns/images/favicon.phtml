@@ -1,0 +1,7 @@
+<?php $src = $this->getLayout()->createBlock('page/html_head')->getFaviconFile(); ?>
+
+Both of the folowing should be correct:<br><br>
+<img src="<?php echo $src; ?>"> <a href='<?php echo $src; ?>'><?php echo $src; ?></a> <br>
+<img src="<?php echo Mage::getUrl(); ?>favicon.ico"> <a href="<?php echo Mage::getUrl(); ?>favicon.ico"><?php echo Mage::getUrl(); ?>favicon.ico</a>
+
+<br><br>**note that some developer servers (MAMP, WAMP) can override the /favicon.ico in httpd.conf

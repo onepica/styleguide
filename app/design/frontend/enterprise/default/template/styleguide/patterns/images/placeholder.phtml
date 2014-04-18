@@ -1,0 +1,16 @@
+<?php
+    $product = Mage::getModel('catalog/product');
+    $attrs = array('image', 'small_image', 'thumbnail');
+
+    foreach ($attrs as $value) :
+        $helper = Mage::helper('catalog/image');
+        $helper->placeholder(null);
+        $helper->init($product, $value);
+        $src = Mage::getDesign()->getSkinUrl($helper->getPlaceholder());
+?>
+    <div style='display: inline-block; margin-right: 10px;'>
+        <img src='<?php echo $src; ?>'> <br> <?php echo $value; ?> <br>
+    </div>
+<?php
+    endforeach;
+?>

@@ -40,5 +40,10 @@
         "Checkboxes"    : "forms/checkboxes.phtml",
         "Text area"     : "forms/textarea.phtml"
     },
+    "Images" : {
+        "Site logo"            : "images/logo.phtml",
+        "Placeholder images"   : "images/placeholder.phtml",
+        "Favicon"              : "images/favicon.phtml"
+    },
     "Pagination toolbar" : "toolbar.phtml"
 }

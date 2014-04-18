@@ -1,0 +1,5 @@
+<?php $block =  $this->getLayout()->createBlock('page/html_header'); ?>
+
+<img src="<?php echo $block->getLogoSrc() ?>" alt="<?php echo $block->getLogoAlt() ?>" /> <br>
+alt text: <?php echo $block->getLogoAlt() ?> <br>
+img url: <a href="<?php echo $block->getLogoSrc() ?>"><?php echo $block->getLogoSrc() ?></a>
